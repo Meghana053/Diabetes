@@ -86,7 +86,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'meghana',
+        'PASSWORD': '',
         'OPTIONS':{'isolation_level':None},       
     }
 }
@@ -135,6 +135,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True  # Use TLS for secure connection
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  # Use the appropriate port for your email provider
-EMAIL_HOST_USER = 'meghanasri262@gmail.com'
-EMAIL_HOST_PASSWORD = 'edsi cfcw neby kbkr'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
