@@ -162,7 +162,7 @@ def password_reset(request):
        
         recipient_list = [email]
 
-        send_mail(subject, message,'meghanasri262@gmail.com', recipient_list)
+        send_mail(subject, message,'abcd@gmail.com', recipient_list)
         
 
         cursor.close()
@@ -355,7 +355,7 @@ def log(request):
 
 
 def filter_food(nutrient, disease):
-    foods_df = pd.read_csv(r"C:\Users\megha\Downloads\DIABETES DISEASE PREDICTION NEW\DIABETES DISEASE PREDICTION NEW\Diabetes Disease\food__dataset new1.csv",encoding_errors="ignore")
+    foods_df = pd.read_csv(r"..\DIABETES DISEASE PREDICTION NEW\Diabetes Disease\food__dataset new1.csv",encoding_errors="ignore")
     filtered_food = foods_df[
         (foods_df['Veg_Non'].str.contains(nutrient, case=False)) &
         (foods_df['Disease'].str.contains(disease, case=False))
@@ -384,7 +384,7 @@ def result(request):
     return render(request, 'Food_index.html', {'message': ''})
 
 
-asanas_df = pd.read_csv(r"C:\Users\megha\Downloads\DIABETES DISEASE PREDICTION NEW\DIABETES DISEASE PREDICTION NEW\Diabetes Disease\final_asan1_1new.csv")
+asanas_df = pd.read_csv(r"..\DIABETES DISEASE PREDICTION NEW\Diabetes Disease\final_asan1_1new.csv")
 columns = ['AID', 'You tube Vdo link','Photo', 'References','Variations','Contraindications','Level','Breathing','awareness']
 asanas_df.drop(columns=columns,inplace=True)
 asanas_df['Benefits'].fillna(0, inplace=True)
